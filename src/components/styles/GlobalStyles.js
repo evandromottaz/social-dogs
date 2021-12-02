@@ -4,11 +4,11 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 body {
+  --type-first: Helvetica, Arial, sans-serif;
+  --type-second: 'Spectral', georgia;
   margin: 0;
   padding-top:4rem;
   color: #333;
-  --type-first: Helvetica, Arial, sans-serif;
-  --type-second: 'Spectral', georgia;
   font-family: var(---type-first);
 }
 
@@ -37,9 +37,9 @@ img {
 
 button,
 input {
+  font-family: var(---type-first);
   display: block;
   font-size: 1rem;
-  font-family: var(---type-first);
   color: #333;
 }
 
