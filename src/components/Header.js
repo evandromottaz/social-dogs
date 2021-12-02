@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyledHeader, Nav, Login, Logo } from './styles/Header.styled';
-// import { ReactComponent as Dogs } from '../assets/dogs.svg';
 
 const Header = () => {
   return (
