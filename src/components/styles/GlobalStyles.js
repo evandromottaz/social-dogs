@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding-top:4rem;
   color: #333;
-  font-family: var(---type-first);
+  font-family: var(--type-first);
 }
 
 h1,
@@ -37,7 +37,7 @@ img {
 
 button,
 input {
-  font-family: var(---type-first);
+  font-family: var(--type-first);
   display: block;
   font-size: 1rem;
   color: #333;
