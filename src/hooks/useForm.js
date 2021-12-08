@@ -14,11 +14,11 @@ const useForm = (type) => {
 
   function validate(value) {
     if (type === false) return true; // se tiver vazio == false, não valide
-    if (value.lenght === 0) {
+    if (value.length === 0) {
       // se for 0, a pessoa clicou mas não digitou nada
       setError('Preencha um valor');
       return false;
-    } else if (types[type] && types[type].regex.test(value)) {
+    } else if (types[type] && !types[type].regex.test(value)) {
       // types[type] == types.email
       setError(types[type].message);
       return false;

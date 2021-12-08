@@ -6,7 +6,8 @@ import {
   Wrapper,
 } from '../styles/Form.styled';
 
-const Input = ({ label, type, name, value, onChange }) => {
+const Input = ({ label, type, name, value, onChange, error, onBlur }) => {
+  console.log(value.length);
   return (
     <Wrapper>
       <StyledLabel htmlFor={name}>{label}</StyledLabel>
@@ -16,9 +17,10 @@ const Input = ({ label, type, name, value, onChange }) => {
         type={type}
         onChange={onChange}
         value={value}
+        onBlur={onBlur}
         autoComplete="current-password"
       />
-      <StyledError>Error</StyledError>
+      {error && <StyledError>{error}</StyledError>}
     </Wrapper>
   );
 };
