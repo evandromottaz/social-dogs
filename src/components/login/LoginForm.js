@@ -5,31 +5,34 @@ import Button from '../form/Button';
 import Input from '../form/Input';
 
 const LoginForm = () => {
-  const username = useForm('email'); //value, setValue, onChange
+  const username = useForm(); //value, setValue, onChange
   const password = useForm();
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(),
-    })
-      .then((response) => {
-        console.log(response);
-        return response.json();
+
+    if (username.validate() && password.validate()) {
+      fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(),
       })
-      .then((json) => {
-        console.log(json);
-      });
+        .then((response) => {
+          console.log(response);
+          return response.json();
+        })
+        .then((json) => {
+          console.log(json);
+        });
+    }
   }
   return (
     <section>
       <h1>Login</h1>
       <form action="" onSubmit={handleSubmit}>
-        <Input label="Usuário" type="email" name="username" {...username} />
+        <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
         <Button>Enviar</Button>
       </form>
