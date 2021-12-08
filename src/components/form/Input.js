@@ -7,7 +7,6 @@ import {
 } from '../styles/Form.styled';
 
 const Input = ({ label, type, name, value, onChange, error, onBlur }) => {
-  console.log(value.length);
   return (
     <Wrapper>
       <StyledLabel htmlFor={name}>{label}</StyledLabel>

@@ -5,7 +5,7 @@ import Button from '../form/Button';
 import Input from '../form/Input';
 
 const LoginForm = () => {
-  const username = useForm(); //value, setValue, onChange
+  const username = useForm('email'); //value, setValue, onChange
   const password = useForm();
 
   function handleSubmit(event) {
@@ -29,7 +29,7 @@ const LoginForm = () => {
     <section>
       <h1>Login</h1>
       <form action="" onSubmit={handleSubmit}>
-        <Input label="Usuário" type="text" name="username" {...username} />
+        <Input label="Usuário" type="email" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
         <Button>Enviar</Button>
       </form>
