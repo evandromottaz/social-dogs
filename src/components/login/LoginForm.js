@@ -6,7 +6,7 @@ import Input from '../form/Input';
 
 const LoginForm = () => {
   const username = useForm(); //value, setValue, onChange
-  const password = useForm(); //value, setValue, onChange
+  const password = useForm();
 
   function handleSubmit(event) {
     event.preventDefault();
