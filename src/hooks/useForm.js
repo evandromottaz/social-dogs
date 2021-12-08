@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyledError } from '../components/styles/Form.styled';
 
 const types = {
   email: {
