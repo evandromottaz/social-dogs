@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Login from './components/login/Login';
 import GlobalStyles from './components/styles/GlobalStyles';
 import { ThemeProvider } from 'styled-components';
+import { UserStorage } from './UserContext';
 
 const theme = {
   container: {
@@ -21,12 +22,14 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} end />
-          <Route path="/login/*" element={<Login />} />
-        </Routes>
-        <Footer />
+        <UserStorage>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} end />
+            <Route path="/login/*" element={<Login />} />
+          </Routes>
+          <Footer />
+        </UserStorage>
       </BrowserRouter>
     </ThemeProvider>
   );
