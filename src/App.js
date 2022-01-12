@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 import Login from './components/login/Login';
-import GlobalStyles from './components/styles/GlobalStyles';
+import GlobalStyles from './components/styles/Global.styled';
 import { ThemeProvider } from 'styled-components';
 import { UserStorage } from './UserContext';
 
@@ -14,6 +14,13 @@ const theme = {
     maxWidth: '50rem',
     padding: '0 1rem',
     margin: '0 auto',
+  },
+  fonts: {
+    typeFirst: 'Helvetica, Arial, sans-serif',
+    typeSecond: 'Spectral, Georgia',
+  },
+  colors: {
+    yellow: '',
   },
 };
 

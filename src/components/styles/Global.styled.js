@@ -1,15 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
+
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 body {
-  --type-first: Helvetica, Arial, sans-serif;
-  --type-second: 'Spectral', georgia;
   margin: 0;
   padding-top:4rem;
   color: #333;
-  font-family: var(--type-first);
+  font-family: ${({ theme }) => theme.fonts.typeFirst}
 }
 
 h1,
@@ -21,6 +22,7 @@ h4 {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 ul,
@@ -37,7 +39,7 @@ img {
 
 button,
 input {
-  font-family: var(--type-first);
+  font-family: ${({ theme }) => theme.fonts.typeFirst};
   display: block;
   font-size: 1rem;
   color: #333;

@@ -1,6 +1,22 @@
-import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
+import { css } from 'styled-components';
+
+const animeLeft = keyframes`
+  to {
+    opacity:1;
+    transform:initial;
+  }
+`;
+
+export const Section = styled.section`
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: ${animeLeft} 0.3s forwards;
+`;
+
 export const Wrapper = styled.div`
-  margin-bottom: 1rem;
+  margin: ${(props) => props.margin};
 `;
 
 export const StyledInput = styled.input`
@@ -28,12 +44,6 @@ export const StyledLabel = styled.label`
   padding-bottom: 0.5rem;
 `;
 
-export const StyledError = styled.p`
-  color: #f31;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-`;
-
 export const StyledButton = styled.button`
   font-size: 1rem;
   cursor: pointer;
@@ -53,5 +63,42 @@ export const StyledButton = styled.button`
   :disabled {
     opacity: 0.5;
     cursor: wait;
+  }
+`;
+
+export const CreateAccount = styled(Link)`
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #fb1;
+  color: #764701;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+  transition: 0.1s;
+  min-width: 6rem;
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #feb, 0 0 0 4px #fb1;
+  }
+  :disabled {
+    opacity: 0.5;
+    cursor: wait;
+  }
+`;
+
+export const LostPassword = styled(Link)`
+  display: inline-block;
+  color: #666;
+  padding: 0.6rem 0;
+  line-height: 1;
+
+  &::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: currentColor;
+    display: block;
   }
 `;
