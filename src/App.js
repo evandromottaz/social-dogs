@@ -20,7 +20,9 @@ const theme = {
     typeSecond: 'Spectral, Georgia',
   },
   colors: {
-    yellow: '',
+    ctaBg: '#fb1',
+    ctaShadow: '#feb',
+    ctaText: '#764701',
   },
 };
 

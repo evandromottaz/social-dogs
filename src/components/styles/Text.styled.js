@@ -13,7 +13,7 @@ export const Title = styled.h1`
     display: block;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #fb1;
+    background-color: ${(props) => props.theme.colors.yellow};
     position: absolute;
     bottom: 5px;
     left: -5px;

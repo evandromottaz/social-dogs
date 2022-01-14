@@ -73,9 +73,9 @@ export const StyledInput = styled.input`
   &:focus,
   &:hover {
     outline: none;
-    border-color: #fb1;
+    border-color: ${(props) => props.theme.colors.ctaBg};
     background-color: white;
-    box-shadow: 0 0 0 3px #fea;
+    box-shadow: 0 0 0 3px ${(props) => props.theme.colors.ctaShadow};
   }
 `;
 
@@ -91,16 +91,19 @@ export const StyledButton = styled.button`
   cursor: pointer;
   border: none;
   border-radius: 0.4rem;
-  background-color: #fb1;
-  color: #764701;
+  background-color: ${(props) => props.theme.colors.ctaBg};
+  color: ${(props) => props.theme.colors.ctaText};
   padding: 0.8rem 1.2rem;
   box-sizing: border-box;
   transition: 0.1s;
   min-width: 6rem;
+  display: inline-block;
+
   &:hover,
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px #feb, 0 0 0 4px #fb1;
+    box-shadow: 0 0 0 3px ${(props) => props.theme.colors.ctaShadow},
+      0 0 0 4px ${(props) => props.theme.colors.ctaBg};
   }
   :disabled {
     opacity: 0.5;
