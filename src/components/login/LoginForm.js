@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import useForm from '../../hooks/useForm';
 import Button from '../form/Button';
 import Input from '../form/Input';
@@ -8,7 +7,6 @@ import {
   CreateAccount,
   LostPassword,
   Section,
-  StyledForm,
   Wrapper,
 } from '../styles/Form.styled';
 import { Title, SubTitle } from '../styles/Text.styled';

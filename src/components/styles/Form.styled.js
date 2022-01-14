@@ -8,14 +8,57 @@ const animeLeft = keyframes`
   }
 `;
 
-export const Section = styled.section`
+export const animation = styled.div`
   opacity: 0;
   transform: translateX(-20px);
   animation: ${animeLeft} 0.3s forwards;
 `;
 
+export const Section = styled(animation).attrs({
+  as: 'section',
+})`
+  display: ${(props) => props.display};
+  grid-template-columns: ${(props) => props.columns};
+  min-height: ${(props) => props.minHeight};
+  gap: 2rem;
+`;
+
+export const LoginSection = styled(animation).attrs({
+  as: 'section',
+})`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 2rem;
+
+  &::before {
+    display: block;
+    content: '';
+    background: url('./assets/login.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+    &::before {
+      display: none;
+    }
+  }
+`;
+
 export const Wrapper = styled.div`
   margin: ${(props) => props.margin};
+`;
+
+export const LoginWrapper = styled(Wrapper).attrs({
+  as: 'div',
+})`
+  max-width: 30rem;
+  padding: 1rem;
+
+  @media (max-width: 40rem) {
+    max-width: 100%;
+  }
 `;
 
 export const StyledInput = styled.input`
@@ -74,6 +117,7 @@ export const LostPassword = styled(Link)`
   color: #666;
   padding: 0.6rem 0;
   line-height: 1;
+  margin-top: 2rem;
 
   &::after {
     content: '';
