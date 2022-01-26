@@ -1,5 +1,4 @@
 import React from 'react';
-// import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -8,6 +7,8 @@ import Login from './components/login/Login';
 import GlobalStyles from './components/styles/Global.styled';
 import { ThemeProvider } from 'styled-components';
 import { UserStorage } from './UserContext';
+import User from './components/user/User.js';
+import ProtectRoute from './components/helper/ProtectRoute';
 
 const theme = {
   container: {
@@ -35,7 +36,15 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} end />
-            <Route path="/login/*" element={<Login />} />
+            <Route path="login/*" element={<Login />} />
+            <Route
+              path="conta/*"
+              element={
+                <ProtectRoute>
+                  <User />
+                </ProtectRoute>
+              }
+            />
           </Routes>
           <Footer />
         </UserStorage>
