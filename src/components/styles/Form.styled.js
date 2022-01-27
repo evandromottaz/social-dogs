@@ -50,15 +50,6 @@ export const Wrapper = styled.div`
   margin: ${(props) => props.margin};
 `;
 
-export const UserWrapper = styled(Wrapper).attrs({
-  as: 'div',
-})`
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  position: relative;
-`;
-
 export const LoginWrapper = styled(Wrapper).attrs({
   as: 'div',
 })`

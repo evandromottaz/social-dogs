@@ -1,12 +1,13 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { UserWrapper } from '../styles/Form.styled';
+import { StyledUser, UserWrapper } from '../styles/User.styled';
 import { Title } from '../styles/Text.styled';
 import UserHeaderNav from './UserHeaderNav';
 
 const UserHeader = () => {
   const [title, setTitle] = React.useState('');
 
+  // pathname obj of useLocation,it get the current page
   const { pathname } = useLocation();
 
   React.useEffect(() => {
@@ -23,10 +24,10 @@ const UserHeader = () => {
   }, [pathname]);
 
   return (
-    <UserWrapper margin="1rem 0 2rem">
+    <StyledUser margin="1rem 0 2rem">
       <Title>{title}</Title>
       <UserHeaderNav />
-    </UserWrapper>
+    </StyledUser>
   );
 };
 
