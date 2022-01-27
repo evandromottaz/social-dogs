@@ -21,7 +21,7 @@ const theme = {
     typeSecond: 'Spectral, Georgia',
   },
   colors: {
-    ctaBg: '#fb1',
+    primary: '#fb1',
     ctaShadow: '#feb',
     ctaText: '#764701',
   },

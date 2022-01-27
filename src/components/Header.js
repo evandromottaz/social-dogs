@@ -3,7 +3,7 @@ import { StyledHeader, Nav, Login, Logo } from './styles/Header.styled';
 import { UserContext } from '../UserContext';
 
 const Header = () => {
-  const { data, userLogout } = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
 
   return (
     <StyledHeader>
@@ -13,9 +13,7 @@ const Header = () => {
         </Logo>
 
         {data ? (
-          <Login to="/login">
-            {data.nome} <button onClick={userLogout}>Sair</button>
-          </Login>
+          <Login to="/login">{data.nome}</Login>
         ) : (
           <Login to="/login">Login / Criar</Login>
         )}

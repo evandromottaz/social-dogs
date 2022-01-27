@@ -50,6 +50,15 @@ export const Wrapper = styled.div`
   margin: ${(props) => props.margin};
 `;
 
+export const UserWrapper = styled(Wrapper).attrs({
+  as: 'div',
+})`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  position: relative;
+`;
+
 export const LoginWrapper = styled(Wrapper).attrs({
   as: 'div',
 })`
@@ -73,7 +82,7 @@ export const StyledInput = styled.input`
   &:focus,
   &:hover {
     outline: none;
-    border-color: ${(props) => props.theme.colors.ctaBg};
+    border-color: ${(props) => props.theme.colors.primary};
     background-color: white;
     box-shadow: 0 0 0 3px ${(props) => props.theme.colors.ctaShadow};
   }
@@ -91,7 +100,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   border: none;
   border-radius: 0.4rem;
-  background-color: ${(props) => props.theme.colors.ctaBg};
+  background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.ctaText};
   padding: 0.8rem 1.2rem;
   box-sizing: border-box;
@@ -103,7 +112,7 @@ export const StyledButton = styled.button`
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px ${(props) => props.theme.colors.ctaShadow},
-      0 0 0 4px ${(props) => props.theme.colors.ctaBg};
+      0 0 0 4px ${(props) => props.theme.colors.primary};
   }
   :disabled {
     opacity: 0.5;
