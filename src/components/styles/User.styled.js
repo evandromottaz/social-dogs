@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.section`
   ${({ theme }) => theme.container}
@@ -63,7 +63,7 @@ const userNavMobile = css`
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transform: translateX(-10px);
   opacity: 0;
-  pointer-events: none; // stop click event and pointer css
+  pointer-events: none;
 
   a,
   button {
@@ -101,7 +101,7 @@ const userNavMobileActive = css`
 `;
 
 export const UserNav = styled.nav`
-  /* if state mobile is true, load mobile css, else desktop */
+  /* if state mobile is true, load mobile css  else desktop */
   ${({ mobile }) => (mobile ? userNavMobile : userNavDesktop)}
 `;
 
@@ -122,7 +122,7 @@ export const MobileButton = styled.button`
 
   // three lines
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 1.2rem;
     height: 2px;
