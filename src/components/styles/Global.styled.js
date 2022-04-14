@@ -1,7 +1,15 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
+
+export const animeLeft = keyframes`
+  to {
+    opacity:1;
+    transform:initial;
+  }
+`;
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
+
 
 * {
   box-sizing: border-box;

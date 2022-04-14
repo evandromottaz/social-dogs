@@ -1,12 +1,6 @@
-import { Link } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
-
-const animeLeft = keyframes`
-  to {
-    opacity:1;
-    transform:initial;
-  }
-`;
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { animeLeft } from "../styles/Global.styled";
 
 export const animation = styled.div`
   opacity: 0;
@@ -15,7 +9,7 @@ export const animation = styled.div`
 `;
 
 export const Section = styled(animation).attrs({
-  as: 'section',
+  as: "section",
 })`
   display: ${(props) => props.display};
   grid-template-columns: ${(props) => props.columns};
@@ -24,7 +18,7 @@ export const Section = styled(animation).attrs({
 `;
 
 export const LoginSection = styled(animation).attrs({
-  as: 'section',
+  as: "section",
 })`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -33,8 +27,8 @@ export const LoginSection = styled(animation).attrs({
 
   &::before {
     display: block;
-    content: '';
-    background: url('./assets/login.jpg') no-repeat center center;
+    content: "";
+    background: url("./assets/login.jpg") no-repeat center center;
     background-size: cover;
   }
 
@@ -51,7 +45,7 @@ export const Wrapper = styled.div`
 `;
 
 export const LoginWrapper = styled(Wrapper).attrs({
-  as: 'div',
+  as: "div",
 })`
   max-width: 30rem;
   padding: 1rem;
@@ -123,7 +117,7 @@ export const LostPassword = styled(Link)`
   margin-top: 2rem;
 
   &::after {
-    content: '';
+    content: "";
     height: 2px;
     width: 100%;
     background-color: currentColor;

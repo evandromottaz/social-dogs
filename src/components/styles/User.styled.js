@@ -101,7 +101,7 @@ const userNavMobileActive = css`
 `;
 
 export const UserNav = styled.nav`
-  /* if state mobile is true, load mobile css  else desktop */
+  /* if state mobile is true, load mobile css else desktop */
   ${({ mobile }) => (mobile ? userNavMobile : userNavDesktop)}
 `;
 
