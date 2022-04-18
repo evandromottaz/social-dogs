@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { animeLeft } from "../styles/Global.styled";
+import styled from 'styled-components';
+import { animeLeft } from '../styles/Global.styled';
 
 const StyledFeedPhotos = styled.ul`
   opacity: 0;
@@ -12,9 +12,7 @@ const StyledFeedPhotos = styled.ul`
   justify-items: center;
 
   @media (max-width: 40rem) {
-    & {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 

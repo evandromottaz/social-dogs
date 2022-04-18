@@ -1,10 +1,10 @@
-import React from "react";
-import FeedPhotosItem from "./FeedPhotosItem";
-import useFetch from "../../hooks/useFetch";
-import { PHOTOS_GET } from "../../api";
-import Error from "../helper/Error";
-import Loading from "../helper/Loading";
-import StyledFeedPhotos from "../styles/StyledFeedPhotos.styled";
+import React from 'react';
+import FeedPhotosItem from './FeedPhotosItem';
+import useFetch from '../../hooks/useFetch';
+import { PHOTOS_GET } from '../../api';
+import Error from '../helper/Error';
+import Loading from '../helper/Loading';
+import StyledFeedPhotos from '../styles/StyledFeedPhotos.styled';
 
 const FeedPhotos = ({ setModalPhoto }) => {
   const { data, loading, error, request } = useFetch();
@@ -13,7 +13,6 @@ const FeedPhotos = ({ setModalPhoto }) => {
     async function fetchPhotos() {
       const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
       const { response, json } = await request(url, options);
-      console.log(json);
     }
     fetchPhotos();
   }, [request]);
@@ -24,7 +23,11 @@ const FeedPhotos = ({ setModalPhoto }) => {
     return (
       <StyledFeedPhotos>
         {data.map((photo) => (
-          <FeedPhotosItem key={photo.id} photo={photo} setModalPhoto={setModalPhoto} />
+          <FeedPhotosItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
         ))}
       </StyledFeedPhotos>
     );
