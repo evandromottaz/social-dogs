@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledFeedPhotosItem = styled.li`
   &:nth-child(2) {
@@ -20,7 +20,7 @@ const StyledFeedPhotosItem = styled.li`
     cursor: pointer;
   }
 
-  & img {
+  & > div {
     grid-area: 1/1;
   }
 
@@ -38,10 +38,10 @@ const StyledFeedPhotosItem = styled.li`
   .viewd::before {
     width: 16px;
     height: 10px;
-    content: "";
+    content: '';
     display: inline-block;
     margin-right: 0.25rem;
-    background: url("../../Assets/visualizacao.svg") no-repeat;
+    background: url('../../Assets/visualizacao.svg') no-repeat;
   }
 
   &:hover .viewd {

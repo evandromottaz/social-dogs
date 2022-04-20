@@ -1,5 +1,6 @@
-import React from "react";
-import StyledFeedPhotosItem from "../styles/StyledFeedPhotosItem";
+import React from 'react';
+import Image from '../helper/Image';
+import StyledFeedPhotosItem from '../styles/StyledFeedPhotosItem';
 
 function FeedPhotosItem({ photo, setModalPhoto }) {
   function handleClick() {
@@ -7,7 +8,7 @@ function FeedPhotosItem({ photo, setModalPhoto }) {
   }
   return (
     <StyledFeedPhotosItem onClick={handleClick}>
-      <img src={photo.src} alt={photo.title} />
+      <Image src={photo.src} alt={photo.title} />
       <span className="viewd">{photo.acessos}</span>
     </StyledFeedPhotosItem>
   );

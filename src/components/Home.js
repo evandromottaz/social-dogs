@@ -1,6 +1,6 @@
-import React from "react";
-import StyledHome from "./styles/StyledHome.styled";
-import Feed from "./feed/Feed";
+import React from 'react';
+import StyledHome from './styles/StyledHome.styled';
+import Feed from './feed/Feed';
 
 const Home = () => {
   return (
