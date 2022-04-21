@@ -9,6 +9,7 @@ import { ThemeProvider } from 'styled-components';
 import { UserStorage } from './UserContext';
 import User from './components/user/User.js';
 import ProtectRoute from './components/helper/ProtectRoute';
+import Photo from './components/photo/Photo';
 
 const theme = {
   container: {
@@ -45,6 +46,7 @@ function App() {
                 </ProtectRoute>
               }
             />
+            <Route path="foto/:id" element={<Photo />} />
           </Routes>
           <Footer />
         </UserStorage>

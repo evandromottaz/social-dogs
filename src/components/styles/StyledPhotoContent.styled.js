@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 const StyledPhotoContent = styled.div`
   margin: auto;
-  height: 36rem;
+  height: ${({ single }) => (single ? 'auto' : '36rem')};
   border-radius: 0.2rem;
   background: white;
   display: grid;
-  grid-template-columns: 36rem 20rem;
+  grid-template-columns: ${({ single }) => (single ? '1fr' : '36rem 20rem')};
   grid-template-rows: auto 1fr auto;
   overflow: hidden;
   opacity: 0;
@@ -21,15 +21,13 @@ const StyledPhotoContent = styled.div`
   }
 
   .details {
-    padding: 2rem 2rem 0 2rem;
+    padding: ${({ single }) => (single ? '1rem 0 0' : '2rem 2rem 0 2rem')};
   }
 
   .img {
-    grid-row: 1/4;
-  }
-
-  .comments {
-    padding: 0 2rem;
+    grid-row: ${({ single }) => (single ? 1 : 1 / 4)};
+    border-radius: ${({ single }) => (single ? '0.4rem' : 'none')};
+    overflow: ${({ single }) => (single ? 'hidden' : 'initial')};
   }
 
   @media (max-width: 64rem) {

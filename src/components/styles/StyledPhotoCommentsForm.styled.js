@@ -4,7 +4,7 @@ const StyledPhotoCommentsForm = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: stretch;
-  margin: 1rem;
+  margin: ${({ single }) => (single ? '1rem 0 1rem' : '1rem')};
 
   .textarea {
     display: block;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledComments = styled.ul`
   overflow-y: auto;
   word-break: break-word;
-  padding: 0 2rem;
+  padding: ${({ single }) => (single ? 0 : '0 2rem')};
 
   li {
     margin-bottom: 0.5rem;

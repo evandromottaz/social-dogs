@@ -9,7 +9,7 @@ const Header = () => {
     <StyledHeader>
       <Nav>
         <Logo to="/">
-          <img src="./assets/dogs.svg" alt="Dogs logo" />
+          <img src="/assets/dogs.svg" alt="Dogs logo" />
         </Logo>
 
         {data ? (
