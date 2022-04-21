@@ -10,6 +10,7 @@ import { UserStorage } from './UserContext';
 import User from './components/user/User.js';
 import ProtectRoute from './components/helper/ProtectRoute';
 import Photo from './components/photo/Photo';
+import UserProfile from './components/user/UserProfile';
 
 const theme = {
   container: {
@@ -47,6 +48,7 @@ function App() {
               }
             />
             <Route path="foto/:id" element={<Photo />} />
+            <Route path="perfil/:user" element={<UserProfile />} />
           </Routes>
           <Footer />
         </UserStorage>
