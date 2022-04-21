@@ -4,7 +4,9 @@ import useFetch from '../../hooks/useFetch';
 import { STATS_GET } from '../../api';
 import Loading from '../helper/Loading';
 import Error from '../helper/Error';
-import UserStatsGraphs from './UserStatsGraphs';
+// lazy faz com que a biblioteca seja adiconada só quando o componente
+// for renderizado - precisa usar React.Suspense logo abaixo.
+const UserStatsGraphs = React.lazy(() => import('./UserStatsGraphs'));
 
 const UserStats = () => {
   const { data, error, loading, request } = useFetch();
@@ -21,10 +23,10 @@ const UserStats = () => {
   if (error) return <Error error={error} />;
   if (data)
     return (
-      <div>
+      <React.Suspense fallback={<Loading />}>
         <Head title="Estatísticas" />
         <UserStatsGraphs data={data} />
-      </div>
+      </React.Suspense>
     );
   else return null;
 };

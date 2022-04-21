@@ -1,5 +1,4 @@
 import React from 'react';
-import useFetch from '../../hooks/useFetch';
 import StyledUserStatsGraph from '../styles/StyledUserStatsGraph';
 import { VictoryPie, VictoryChart, VictoryBar } from 'victory';
 
