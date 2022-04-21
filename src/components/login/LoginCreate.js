@@ -8,6 +8,7 @@ import { Title } from '../styles/Text.styled';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../hooks/useFetch';
 import Error from '../helper/Error';
+import Head from '../helper/Head';
 
 const LoginCreate = () => {
   const username = useForm();
@@ -32,6 +33,7 @@ const LoginCreate = () => {
 
   return (
     <Section>
+      <Head title="Criar conta" />
       <Title>Cadastre-se</Title>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />

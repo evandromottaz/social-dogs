@@ -6,11 +6,12 @@ import Error from '../helper/Error';
 import Loading from '../helper/Loading';
 import PhotoContent from './PhotoContent';
 import StyledHome from '../styles/StyledHome.styled';
+import Head from '../helper/Head';
 
 const Photo = () => {
   const { id } = useParams();
   const { data, loading, request, error } = useFetch();
-
+  console.log(data);
   React.useEffect(() => {
     const { url, options } = PHOTO_GET(id);
     request(url, options);
@@ -20,6 +21,7 @@ const Photo = () => {
   if (data)
     return (
       <StyledHome>
+        <Head title={data.photo.title} />
         <PhotoContent data={data} single={true} />
       </StyledHome>
     );

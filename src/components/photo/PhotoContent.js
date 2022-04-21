@@ -10,7 +10,6 @@ import Image from '../helper/Image';
 const PhotoContent = ({ data, single }) => {
   const user = React.useContext(UserContext);
   const { photo, comments } = data;
-  console.log(single);
 
   return (
     <StyledPhotoContent single={single}>

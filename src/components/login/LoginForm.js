@@ -11,6 +11,7 @@ import {
 } from '../styles/Form.styled';
 import { Title, SubTitle } from '../styles/Text.styled';
 import Error from '../helper/Error';
+import Head from '../helper/Head';
 
 const LoginForm = () => {
   const username = useForm(); //value, setValue, onChange
@@ -26,6 +27,7 @@ const LoginForm = () => {
   }
   return (
     <Section>
+      <Head title="Login" />
       <Title>Login</Title>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />

@@ -6,6 +6,7 @@ import Button from '../form/Button';
 import Input from '../form/Input';
 import Error from '../helper/Error';
 import { Title } from '../styles/Text.styled';
+import Head from '../helper/Head';
 
 const LoginPasswordLost = () => {
   const login = useForm();
@@ -21,6 +22,7 @@ const LoginPasswordLost = () => {
   }
   return (
     <section>
+      <Head title="Esqueceu a senha" />
       <Title>Perdeu a senha?</Title>
       {data ? (
         <p>{data}</p>
