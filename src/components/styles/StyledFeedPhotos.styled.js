@@ -1,10 +1,6 @@
 import styled from 'styled-components';
-import { animeLeft } from '../styles/Global.styled';
 
 const StyledFeedPhotos = styled.ul`
-  opacity: 0;
-  transform: translateX(-20px);
-  animation: ${animeLeft} 0.3s forwards;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;

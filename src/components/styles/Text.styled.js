@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
-  font-family: ${(props) => props.theme.fonts.typeSecond};
+  font-family: ${({ theme }) => theme.fonts.typeSecond};
   line-height: 1;
   font-size: 3rem;
   margin: 1rem 0;
@@ -13,7 +13,7 @@ export const Title = styled.h1`
     display: block;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: ${(props) => props.theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.primary};
     position: absolute;
     bottom: 5px;
     left: -5px;
@@ -23,7 +23,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-family: ${(props) => props.theme.fonts.typeSecond};
+  font-family: ${({ theme }) => theme.fonts.typeSecond};
   line-height: 1;
   font-size: 2rem;
 

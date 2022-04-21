@@ -1,11 +1,4 @@
-import { createGlobalStyle, keyframes } from 'styled-components';
-
-export const animeLeft = keyframes`
-  to {
-    opacity:1;
-    transform:initial;
-  }
-`;
+import { createGlobalStyle, keyframes, css } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
@@ -51,6 +44,19 @@ input {
   font-size: 1rem;
   color: #333;
 }
+
+@keyframes animeLeft {
+  to {
+    opacity:1;
+    transform:initial;
+  }
+}
+
+.animation {
+  animation: animeLeft 0.3s forwards;
+  opacity: 0;
+  transform: translateX(-20px);
+};
 
 `;
 
