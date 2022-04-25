@@ -7,13 +7,16 @@ import Styles from '../styles/Form.styled';
 import { Title, SubTitle } from '../styles/Text.styled';
 import Error from '../helper/Error';
 import Head from '../helper/Head';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const username = useForm(); //value, setValue, onChange
   const password = useForm();
-
+  const navigate = useNavigate();
   const { userLogin, error, loading } = React.useContext(UserContext);
+  function handleClick() {
+    navigate('/login/criar');
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -42,9 +45,7 @@ const LoginForm = () => {
       <div>
         <SubTitle margin="4rem 0 0">Cadastre-se</SubTitle>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
-        <Link className="createAccount" to="/login/criar">
-          Cadastro
-        </Link>
+        <Button onClick={handleClick}>Cadastro</Button>
       </div>
     </Styles>
   );
