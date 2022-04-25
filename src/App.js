@@ -36,7 +36,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Styles>
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           <UserStorage>
             <Header />
             <main>
