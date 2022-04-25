@@ -2,7 +2,7 @@
   "name": "social-dogs",
   "version": "0.1.0",
   "private": false,
-  "homepage": "./github-page/",
+  "homepage": "github-page/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -13,7 +13,6 @@
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.3",
-    "surge": "^0.23.1",
     "victory": "^36.3.2",
     "web-vitals": "^1.0.1"
   },
