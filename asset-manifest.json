@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.js": "./github-page/static/js/main.b899f1a8.chunk.js",
-    "main.js.map": "./github-page/static/js/main.b899f1a8.chunk.js.map",
-    "runtime-main.js": "./github-page/static/js/runtime-main.1e81d318.js",
-    "runtime-main.js.map": "./github-page/static/js/runtime-main.1e81d318.js.map",
-    "static/js/2.40d3422e.chunk.js": "./github-page/static/js/2.40d3422e.chunk.js",
-    "static/js/2.40d3422e.chunk.js.map": "./github-page/static/js/2.40d3422e.chunk.js.map",
-    "static/js/3.25405865.chunk.js": "./github-page/static/js/3.25405865.chunk.js",
-    "static/js/3.25405865.chunk.js.map": "./github-page/static/js/3.25405865.chunk.js.map",
-    "static/js/4.16df777a.chunk.js": "./github-page/static/js/4.16df777a.chunk.js",
-    "static/js/4.16df777a.chunk.js.map": "./github-page/static/js/4.16df777a.chunk.js.map",
-    "index.html": "./github-page/index.html",
-    "static/js/3.25405865.chunk.js.LICENSE.txt": "./github-page/static/js/3.25405865.chunk.js.LICENSE.txt",
-    "static/media/adicionar.2fe277f9.svg": "./github-page/static/media/adicionar.2fe277f9.svg",
-    "static/media/dogs-footer.9c77af3a.svg": "./github-page/static/media/dogs-footer.9c77af3a.svg",
-    "static/media/enviar.1112bddc.svg": "./github-page/static/media/enviar.1112bddc.svg",
-    "static/media/estatisticas.c69dd1e1.svg": "./github-page/static/media/estatisticas.c69dd1e1.svg",
-    "static/media/feed.b8b13312.svg": "./github-page/static/media/feed.b8b13312.svg",
-    "static/media/sair.a1917210.svg": "./github-page/static/media/sair.a1917210.svg"
+    "main.js": "/github-page/static/js/main.b899f1a8.chunk.js",
+    "main.js.map": "/github-page/static/js/main.b899f1a8.chunk.js.map",
+    "runtime-main.js": "/github-page/static/js/runtime-main.ec0a9a6c.js",
+    "runtime-main.js.map": "/github-page/static/js/runtime-main.ec0a9a6c.js.map",
+    "static/js/2.40d3422e.chunk.js": "/github-page/static/js/2.40d3422e.chunk.js",
+    "static/js/2.40d3422e.chunk.js.map": "/github-page/static/js/2.40d3422e.chunk.js.map",
+    "static/js/3.2440419d.chunk.js": "/github-page/static/js/3.2440419d.chunk.js",
+    "static/js/3.2440419d.chunk.js.map": "/github-page/static/js/3.2440419d.chunk.js.map",
+    "static/js/4.16df777a.chunk.js": "/github-page/static/js/4.16df777a.chunk.js",
+    "static/js/4.16df777a.chunk.js.map": "/github-page/static/js/4.16df777a.chunk.js.map",
+    "index.html": "/github-page/index.html",
+    "static/js/3.2440419d.chunk.js.LICENSE.txt": "/github-page/static/js/3.2440419d.chunk.js.LICENSE.txt",
+    "static/media/adicionar.2fe277f9.svg": "/github-page/static/media/adicionar.2fe277f9.svg",
+    "static/media/dogs-footer.9c77af3a.svg": "/github-page/static/media/dogs-footer.9c77af3a.svg",
+    "static/media/enviar.1112bddc.svg": "/github-page/static/media/enviar.1112bddc.svg",
+    "static/media/estatisticas.c69dd1e1.svg": "/github-page/static/media/estatisticas.c69dd1e1.svg",
+    "static/media/feed.b8b13312.svg": "/github-page/static/media/feed.b8b13312.svg",
+    "static/media/sair.a1917210.svg": "/github-page/static/media/sair.a1917210.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1e81d318.js",
-    "static/js/3.25405865.chunk.js",
+    "static/js/runtime-main.ec0a9a6c.js",
+    "static/js/3.2440419d.chunk.js",
     "static/js/main.b899f1a8.chunk.js"
   ]
 }
