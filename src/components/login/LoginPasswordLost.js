@@ -11,11 +11,11 @@ import Head from '../helper/Head';
 
 const LoginPasswordLost = () => {
   const login = useForm();
-  const { data, loading, error, request } = useFetch();
+  const { data, loading, error } = useFetch();
 
   async function handleSubmit(ev) {
     ev.preventDefault();
-    const { url, options } = PASSWORD_LOST({
+    PASSWORD_LOST({
       login: login.value,
       url: window.location.href.replace('perdeu', 'resetar'),
     });
