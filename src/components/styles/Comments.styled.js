@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledComments = styled.ul`
+const Comments = styled.ul`
   overflow-y: auto;
   word-break: break-word;
   padding: ${({ single }) => (single ? 0 : '0 2rem')};
@@ -11,4 +11,4 @@ const StyledComments = styled.ul`
   }
 `;
 
-export default StyledComments;
+export default Comments;

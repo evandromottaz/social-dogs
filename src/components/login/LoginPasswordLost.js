@@ -6,6 +6,7 @@ import Button from '../form/Button';
 import Input from '../form/Input';
 import Error from '../helper/Error';
 import { Title } from '../styles/Text.styled';
+import Styles from '../styles/Form.styled';
 import Head from '../helper/Head';
 
 const LoginPasswordLost = () => {
@@ -21,7 +22,7 @@ const LoginPasswordLost = () => {
     const { json } = await request(url, options);
   }
   return (
-    <section>
+    <Styles className="animation">
       <Head title="Esqueceu a senha" />
       <Title>Perdeu a senha?</Title>
       {data ? (
@@ -38,7 +39,7 @@ const LoginPasswordLost = () => {
           <Error error={error} />
         </form>
       )}
-    </section>
+    </Styles>
   );
 };
 

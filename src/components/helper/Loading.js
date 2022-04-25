@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledLoading from '../styles/StyledLoading.styled';
+import Styles from '../styles/Loading.styled';
 
 const Loading = () => {
   const [step, setStep] = React.useState(0);
@@ -22,7 +22,7 @@ const Loading = () => {
   }
 
   return (
-    <StyledLoading>
+    <Styles>
       <div className="loading">
         <svg
           width="46"
@@ -101,7 +101,7 @@ const Loading = () => {
           </g>
         </svg>
       </div>
-    </StyledLoading>
+    </Styles>
   );
 };
 

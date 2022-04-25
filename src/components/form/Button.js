@@ -1,8 +1,11 @@
 import React from 'react';
-import { StyledButton } from '../styles/Form.styled';
 
 const Button = ({ children, ...props }) => {
-  return <StyledButton {...props}>{children}</StyledButton>;
+  return (
+    <button type="submit" {...props}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

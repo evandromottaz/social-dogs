@@ -1,9 +1,9 @@
 import React from 'react';
-import StyledPhotoDelete from '../styles/StyledPhotoDelete.styled';
+import Styles from '../styles/ButtonPhotoDelete.styled';
 import { PHOTO_DELETE } from '../../api';
 import useFetch from '../../hooks/useFetch';
 
-const PhotoDelete = ({ id }) => {
+const ButtonPhotoDelete = ({ id }) => {
   const { loading, request } = useFetch();
 
   async function handleClick() {
@@ -18,16 +18,16 @@ const PhotoDelete = ({ id }) => {
   return (
     <>
       {loading ? (
-        <StyledPhotoDelete disabled className="delete">
+        <Styles disabled className="delete">
           Deletando
-        </StyledPhotoDelete>
+        </Styles>
       ) : (
-        <StyledPhotoDelete onClick={handleClick} className="delete">
+        <Styles onClick={handleClick} className="delete">
           Deletar
-        </StyledPhotoDelete>
+        </Styles>
       )}
     </>
   );
 };
 
-export default PhotoDelete;
+export default ButtonPhotoDelete;

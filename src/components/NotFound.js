@@ -1,13 +1,13 @@
 import React from 'react';
-import StyledHome from './styles/StyledHome.styled';
+import Home from './styles/Home.styled';
 import { Title } from './styles/Text.styled';
 
 const NotFound = ({ text }) => {
   return (
-    <StyledHome>
+    <Home>
       <Title>Ops...</Title>
       <p>{text}</p>
-    </StyledHome>
+    </Home>
   );
 };
 

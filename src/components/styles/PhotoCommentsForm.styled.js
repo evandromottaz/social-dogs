@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledPhotoCommentsForm = styled.form`
+const PhotoCommentsForm = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: stretch;
@@ -50,10 +50,10 @@ const StyledPhotoCommentsForm = styled.form`
 
   .button:focus svg g,
   .button:hover svg g {
-    animation: latir 0.6s infinite;
+    animation: bark 0.6s infinite;
   }
 
-  @keyframes latir {
+  @keyframes bark {
     from {
       opacity: 0;
     }
@@ -63,4 +63,4 @@ const StyledPhotoCommentsForm = styled.form`
   }
 `;
 
-export default StyledPhotoCommentsForm;
+export default PhotoCommentsForm;

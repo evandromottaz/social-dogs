@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledFeedModal = styled.div`
+const FeedModal = styled.div`
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -16,4 +16,4 @@ const StyledFeedModal = styled.div`
   }
 `;
 
-export default StyledFeedModal;
+export default FeedModal;

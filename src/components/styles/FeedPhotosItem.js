@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledFeedPhotosItem = styled.li`
+const FeedPhotosItem = styled.li`
   &:nth-child(2) {
     grid-column: 2 / 4;
     grid-row: span 2;
@@ -49,4 +49,4 @@ const StyledFeedPhotosItem = styled.li`
   }
 `;
 
-export default StyledFeedPhotosItem;
+export default FeedPhotosItem;

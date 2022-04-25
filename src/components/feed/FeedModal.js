@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledFeedModal from '../styles/StyledFeedModal.styled';
+import Styles from '../styles/FeedModal.styled';
 import useFetch from '../../hooks/useFetch';
 import { PHOTO_GET } from '../../api';
 import Error from '../helper/Error';
@@ -19,11 +19,11 @@ function FeedModal({ photo, setModalPhoto }) {
   }
 
   return (
-    <StyledFeedModal onClick={handleOutsideClick}>
+    <Styles onClick={handleOutsideClick}>
       {error && <Error error={error} />}
       {loading && <Loading />}
       {data && <PhotoContent data={data} />}
-    </StyledFeedModal>
+    </Styles>
   );
 }
 

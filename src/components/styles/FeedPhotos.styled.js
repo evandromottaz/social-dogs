@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledFeedPhotos = styled.ul`
+const FeedPhotos = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -12,4 +12,4 @@ const StyledFeedPhotos = styled.ul`
   }
 `;
 
-export default StyledFeedPhotos;
+export default FeedPhotos;

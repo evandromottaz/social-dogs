@@ -26,6 +26,7 @@ export const SubTitle = styled.h2`
   font-family: ${({ theme }) => theme.fonts.typeSecond};
   line-height: 1;
   font-size: 2rem;
+  margin: ${({ margin }) => (margin ? margin : 0)};
 
   &::after {
     content: '';

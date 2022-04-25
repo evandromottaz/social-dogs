@@ -2,7 +2,7 @@ import React from 'react';
 import Input from '../form/Input';
 import Button from '../form/Button';
 import Error from '../helper/Error';
-import StyledUserPhotoPost from '../styles/UserPhotoPost.styled';
+import Styles from '../styles/UserPhotoPost.styled';
 import useForm from '../../hooks/useForm';
 import useFetch from '../../hooks/useFetch';
 import { PHOTO_POST } from '../../api';
@@ -42,7 +42,7 @@ const UserPhotoPost = () => {
   }
 
   return (
-    <StyledUserPhotoPost>
+    <Styles>
       <Head title="Poste sua foto" />
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="nome" {...nome} />
@@ -69,7 +69,7 @@ const UserPhotoPost = () => {
           ></div>
         )}
       </div>
-    </StyledUserPhotoPost>
+    </Styles>
   );
 };
 

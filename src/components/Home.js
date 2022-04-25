@@ -1,14 +1,14 @@
 import React from 'react';
-import StyledHome from './styles/StyledHome.styled';
+import Styles from './styles/Home.styled';
 import Feed from './feed/Feed';
 import Head from './helper/Head';
 
 const Home = () => {
   return (
-    <StyledHome>
+    <Styles>
       <Head title="Home" description="Página principal sobre fotos do site" />
       <Feed />
-    </StyledHome>
+    </Styles>
   );
 };
 

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const StyledHeader = styled.header`
+const Header = styled.header`
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -37,3 +37,5 @@ export const Login = styled(Link)`
     margin-left: 0.5rem;
   }
 `;
+
+export default Header;

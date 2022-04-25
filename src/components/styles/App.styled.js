@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledApp = styled.div`
+const App = styled.div`
   display: flex;
   flex-direction: column;
   min-height: calc(100vh + 10rem);
@@ -10,4 +10,4 @@ const StyledApp = styled.div`
   }
 `;
 
-export default StyledApp;
+export default App;

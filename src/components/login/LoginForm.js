@@ -3,15 +3,11 @@ import useForm from '../../hooks/useForm';
 import Button from '../form/Button';
 import Input from '../form/Input';
 import { UserContext } from '../../UserContext';
-import {
-  CreateAccount,
-  LostPassword,
-  Section,
-  Wrapper,
-} from '../styles/Form.styled';
+import Styles from '../styles/Form.styled';
 import { Title, SubTitle } from '../styles/Text.styled';
 import Error from '../helper/Error';
 import Head from '../helper/Head';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
   const username = useForm(); //value, setValue, onChange
@@ -26,7 +22,7 @@ const LoginForm = () => {
     }
   }
   return (
-    <Section>
+    <Styles margin="1rem 0">
       <Head title="Login" />
       <Title>Login</Title>
       <form onSubmit={handleSubmit}>
@@ -37,16 +33,20 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error error={error} />
+        <Error error={error && 'Usuário ou senha incorretos.'} />
       </form>
-      <LostPassword to="/login/perdeu">Esqueceu a senha?</LostPassword>
+      <Link className="lostPassword" to="/login/perdeu">
+        Esqueceu a senha?
+      </Link>
 
-      <Wrapper margin="4rem 0">
-        <SubTitle>Cadastre-se</SubTitle>
+      <div>
+        <SubTitle margin="4rem 0 0">Cadastre-se</SubTitle>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
-        <CreateAccount to="/login/criar">Cadastro</CreateAccount>
-      </Wrapper>
-    </Section>
+        <Link className="createAccount" to="/login/criar">
+          Cadastro
+        </Link>
+      </div>
+    </Styles>
   );
 };
 

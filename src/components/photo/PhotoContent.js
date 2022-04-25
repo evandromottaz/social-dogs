@@ -1,10 +1,10 @@
 import React from 'react';
-import StyledPhotoContent from '../styles/StyledPhotoContent.styled';
+import Styles from '../styles/PhotoContent.styled';
 import { Link } from 'react-router-dom';
 import PhotoComments from './PhotoComments';
 import { Title } from '../styles/Text.styled';
 import { UserContext } from '../../UserContext';
-import PhotoDelete from './PhotoDelete';
+import ButtonPhotoDelete from './ButtonPhotoDelete';
 import Image from '../helper/Image';
 
 const PhotoContent = ({ data, single }) => {
@@ -12,7 +12,7 @@ const PhotoContent = ({ data, single }) => {
   const { photo, comments } = data;
 
   return (
-    <StyledPhotoContent single={single}>
+    <Styles single={single}>
       <div className="img">
         <Image src={photo.src} alt={photo.title} />
       </div>
@@ -21,7 +21,7 @@ const PhotoContent = ({ data, single }) => {
         <div>
           <p className="author">
             {user.data && user.data.username === photo.author ? (
-              <PhotoDelete id={photo.id} />
+              <ButtonPhotoDelete id={photo.id} />
             ) : (
               <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
             )}
@@ -41,9 +41,8 @@ const PhotoContent = ({ data, single }) => {
           </ul>
         </div>
       </div>
-
       <PhotoComments id={photo.id} comments={comments} single={single} />
-    </StyledPhotoContent>
+    </Styles>
   );
 };
 

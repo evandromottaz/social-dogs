@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledLoading = styled.div`
+const Loading = styled.div`
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -22,4 +22,4 @@ const StyledLoading = styled.div`
   }
 `;
 
-export default StyledLoading;
+export default Loading;

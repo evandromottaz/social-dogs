@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledUserStatsGraph from '../styles/StyledUserStatsGraph';
+import Styles from '../styles/UserStatsGraph.styled';
 import { VictoryPie, VictoryChart, VictoryBar } from 'victory';
 
 const UserStatsGraphs = ({ data }) => {
@@ -22,7 +22,7 @@ const UserStatsGraphs = ({ data }) => {
   }, []);
 
   return (
-    <StyledUserStatsGraph className="animation">
+    <Styles className="animation">
       <div className="total graphItem">
         <p>Acessos: {total}</p>
       </div>
@@ -45,7 +45,7 @@ const UserStatsGraphs = ({ data }) => {
           <VictoryBar alignment="start" data={graph}></VictoryBar>
         </VictoryChart>
       </div>
-    </StyledUserStatsGraph>
+    </Styles>
   );
 };
 

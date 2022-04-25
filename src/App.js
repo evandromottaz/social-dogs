@@ -12,7 +12,7 @@ import ProtectRoute from './components/helper/ProtectRoute';
 import Photo from './components/photo/Photo';
 import UserProfile from './components/user/UserProfile';
 import NotFound from './components/NotFound';
-import StyledApp from './components/styles/StyledApp';
+import Styles from './components/styles/App.styled';
 
 const theme = {
   container: {
@@ -35,7 +35,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <StyledApp>
+      <Styles>
         <BrowserRouter>
           <UserStorage>
             <Header />
@@ -59,7 +59,7 @@ function App() {
             <Footer />
           </UserStorage>
         </BrowserRouter>
-      </StyledApp>
+      </Styles>
     </ThemeProvider>
   );
 }

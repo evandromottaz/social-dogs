@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.section`
+const User = styled.section`
   ${({ theme }) => theme.container}
 `;
 
-export const StyledUser = styled.header`
+export const Header = styled.div`
   margin: ${({ margin }) => margin};
   display: grid;
   grid-template-columns: 1fr auto;
@@ -122,7 +122,7 @@ export const MobileButton = styled.button`
 
   // three lines
   &::after {
-    content: "";
+    content: '';
     display: block;
     width: 1.2rem;
     height: 2px;
@@ -150,3 +150,5 @@ export const MobileButton = styled.button`
     }
   }
 `;
+
+export default User;

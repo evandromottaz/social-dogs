@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledUserStatsGraph = styled.section`
+const UserStatsGraph = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -32,4 +32,4 @@ const StyledUserStatsGraph = styled.section`
   }
 `;
 
-export default StyledUserStatsGraph;
+export default UserStatsGraph;

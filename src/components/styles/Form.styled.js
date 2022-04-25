@@ -1,11 +1,57 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Section = styled.section`
+const Form = styled.section`
   display: ${(props) => props.display};
   grid-template-columns: ${(props) => props.columns};
   min-height: ${(props) => props.minHeight};
   gap: 2rem;
+
+  div {
+    margin: ${({ margin }) => (margin ? margin : '1rem 0')};
+  }
+
+  .lostPassword {
+    display: inline-block;
+    color: #666;
+    padding: 0.6rem 0;
+    line-height: 1;
+    margin-top: 2rem;
+
+    &::after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background-color: currentColor;
+      display: block;
+    }
+  }
+
+  .createAccount,
+  button {
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.ctaText};
+    padding: 0.8rem 1.2rem;
+    box-sizing: border-box;
+    transition: 0.1s;
+    min-width: 6rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px ${(props) => props.theme.colors.ctaShadow},
+        0 0 0 4px ${(props) => props.theme.colors.primary};
+    }
+    :disabled {
+      opacity: 0.5;
+      cursor: wait;
+    }
+  }
 `;
 
 export const LoginSection = styled.section`
@@ -29,87 +75,4 @@ export const LoginSection = styled.section`
   }
 `;
 
-export const Wrapper = styled.div`
-  margin: ${(props) => props.margin};
-`;
-
-export const LoginWrapper = styled(Wrapper).attrs({
-  as: 'div',
-})`
-  max-width: 30rem;
-  padding: 1rem;
-
-  @media (max-width: 40rem) {
-    max-width: 100%;
-  }
-`;
-
-export const StyledInput = styled.input`
-  border: 1px solid #eee;
-  display: block;
-  width: 100%;
-  font-size: 1rem;
-  padding: 0.8rem;
-  border-radius: 0.4rem;
-  background-color: #eee;
-  transition: 0.2s;
-  &:focus,
-  &:hover {
-    outline: none;
-    border-color: ${(props) => props.theme.colors.primary};
-    background-color: white;
-    box-shadow: 0 0 0 3px ${(props) => props.theme.colors.ctaShadow};
-  }
-`;
-
-export const StyledLabel = styled.label`
-  display: block;
-  font-size: 1rem;
-  line-height: 1;
-  padding-bottom: 0.5rem;
-`;
-
-export const StyledButton = styled.button`
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.4rem;
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.ctaText};
-  padding: 0.8rem 1.2rem;
-  box-sizing: border-box;
-  transition: 0.1s;
-  min-width: 6rem;
-  display: inline-block;
-
-  &:hover,
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px ${(props) => props.theme.colors.ctaShadow},
-      0 0 0 4px ${(props) => props.theme.colors.primary};
-  }
-  :disabled {
-    opacity: 0.5;
-    cursor: wait;
-  }
-`;
-
-export const CreateAccount = styled(StyledButton).attrs({
-  as: Link,
-})``;
-
-export const LostPassword = styled(Link)`
-  display: inline-block;
-  color: #666;
-  padding: 0.6rem 0;
-  line-height: 1;
-  margin-top: 2rem;
-
-  &::after {
-    content: '';
-    height: 2px;
-    width: 100%;
-    background-color: currentColor;
-    display: block;
-  }
-`;
+export default Form;

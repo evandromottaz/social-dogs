@@ -4,7 +4,7 @@ import useFetch from '../../hooks/useFetch';
 import { PHOTOS_GET } from '../../api';
 import Error from '../helper/Error';
 import Loading from '../helper/Loading';
-import StyledFeedPhotos from '../styles/StyledFeedPhotos.styled';
+import Styles from '../styles/FeedPhotos.styled';
 
 const FeedPhotos = ({ page, setModalPhoto, user, setInfinite }) => {
   const { data, loading, error, request } = useFetch();
@@ -23,7 +23,7 @@ const FeedPhotos = ({ page, setModalPhoto, user, setInfinite }) => {
   if (loading) return <Loading />;
   if (data)
     return (
-      <StyledFeedPhotos>
+      <Styles>
         {data.map((photo) => (
           <FeedPhotosItem
             key={photo.id}
@@ -31,7 +31,7 @@ const FeedPhotos = ({ page, setModalPhoto, user, setInfinite }) => {
             setModalPhoto={setModalPhoto}
           />
         ))}
-      </StyledFeedPhotos>
+      </Styles>
     );
   else return null;
 };

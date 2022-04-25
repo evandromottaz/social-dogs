@@ -1,12 +1,13 @@
 import React from 'react';
 import Error from '../helper/Error';
-import { StyledInput, StyledLabel, Wrapper } from '../styles/Form.styled';
+import Styles, { Label } from '../styles/Input.styled';
 
 const Input = ({ label, type, name, value, onChange, error, onBlur }) => {
   return (
-    <Wrapper margin="1rem 0">
-      <StyledLabel htmlFor={name}>{label}</StyledLabel>
-      <StyledInput
+    <>
+      <Label htmlFor={name}></Label>
+      {label}
+      <Styles
         id={name}
         name={name}
         type={type}
@@ -16,7 +17,7 @@ const Input = ({ label, type, name, value, onChange, error, onBlur }) => {
         autoComplete="current-password"
       />
       {error && <Error error={error} />}
-    </Wrapper>
+    </>
   );
 };
 

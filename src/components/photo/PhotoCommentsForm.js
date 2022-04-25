@@ -1,9 +1,9 @@
 import React from 'react';
-import { ReactComponent as Enviar } from '../../assets/enviar.svg';
+import { ReactComponent as BarkIcon } from '../../assets/enviar.svg';
 import useFetch from '../../hooks/useFetch';
 import { COMMENT_POST } from '../../api';
 import Error from '../helper/Error';
-import StyledCommentsPhotoForm from '../styles/StyledPhotoCommentsForm.styled';
+import Styles from '../styles/PhotoCommentsForm.styled';
 
 const PhotoCommentsForm = ({ id, setComments, single }) => {
   const { request, error } = useFetch();
@@ -20,7 +20,7 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
   }
 
   return (
-    <StyledCommentsPhotoForm onSubmit={handleSubmit} single={single}>
+    <Styles onSubmit={handleSubmit} single={single}>
       <textarea
         id="comment"
         name="comment"
@@ -30,10 +30,10 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
         className="textarea"
       />
       <button className="button">
-        <Enviar />
+        <BarkIcon />
       </button>
       <Error error={error} />
-    </StyledCommentsPhotoForm>
+    </Styles>
   );
 };
 

@@ -5,6 +5,7 @@ import Button from '../form/Button';
 import Input from '../form/Input';
 import { PASSWORD_RESET } from '../../api';
 import { Title } from '../styles/Text.styled';
+import Styles from '../styles/Form.styled';
 import Error from '../helper/Error';
 import { useNavigate } from 'react-router-dom';
 import Head from '../helper/Head';
@@ -39,7 +40,7 @@ const LoginPasswordReset = () => {
     }
   }
   return (
-    <div>
+    <Styles className="animation">
       <Head title="Resete sua senha" />
       <Title>Resete a senha</Title>
       <form onSubmit={handleSubmit}>
@@ -56,7 +57,7 @@ const LoginPasswordReset = () => {
         )}
       </form>
       <Error error={error} />
-    </div>
+    </Styles>
   );
 };
 

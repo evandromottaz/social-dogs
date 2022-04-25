@@ -1,7 +1,7 @@
 import React from 'react';
 import { UserContext } from '../../UserContext';
 import PhotoCommentsForm from './PhotoCommentsForm';
-import StyledComments from './../styles/StyledComments.styled';
+import Comments from './../styles/Comments.styled';
 
 const PhotoComments = (props) => {
   const [comments, setComments] = React.useState(() => props.comments);
@@ -15,14 +15,14 @@ const PhotoComments = (props) => {
 
   return (
     <>
-      <StyledComments ref={commentsSection} single={props.single}>
+      <Comments ref={commentsSection} single={props.single}>
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
             <b>{comment.comment_author}: </b>
             <span>{comment.comment_content}</span>
           </li>
         ))}
-      </StyledComments>
+      </Comments>
       {login && (
         <PhotoCommentsForm
           id={props.id}

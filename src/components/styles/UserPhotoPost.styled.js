@@ -1,10 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const StyledUserPhotoPost = styled.section`
+const UserPhotoPost = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+  }
 
   .file {
     margin-bottom: 1rem;
@@ -17,11 +21,11 @@ const StyledUserPhotoPost = styled.section`
   }
 
   .preview::after {
-    content: "";
+    content: '';
     display: block;
     height: 0px;
     padding-bottom: 100%;
   }
 `;
 
-export default StyledUserPhotoPost;
+export default UserPhotoPost;

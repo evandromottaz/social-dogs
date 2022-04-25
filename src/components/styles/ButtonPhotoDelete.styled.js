@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledPhotoDelete = styled.button`
+const ButtonPhotoDelete = styled.button`
   background: #ddd;
   padding: 0.3rem 0.6rem;
   line-height: 1;
@@ -20,4 +20,4 @@ const StyledPhotoDelete = styled.button`
   }
 `;
 
-export default StyledPhotoDelete;
+export default ButtonPhotoDelete;

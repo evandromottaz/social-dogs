@@ -3,7 +3,7 @@ import { USER_POST } from '../../api';
 import useForm from '../../hooks/useForm';
 import Button from '../form/Button';
 import Input from '../form/Input';
-import { Section } from '../styles/Form.styled';
+import Styles from '../styles/Form.styled';
 import { Title } from '../styles/Text.styled';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../hooks/useFetch';
@@ -32,7 +32,7 @@ const LoginCreate = () => {
   }
 
   return (
-    <Section>
+    <Styles margin="1rem 0" className="animation">
       <Head title="Criar conta" />
       <Title>Cadastre-se</Title>
       <form onSubmit={handleSubmit}>
@@ -46,7 +46,7 @@ const LoginCreate = () => {
         )}
         <Error error={error} />
       </form>
-    </Section>
+    </Styles>
   );
 };
 

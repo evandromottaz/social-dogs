@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledPhotoContent = styled.div`
+const PhotoContent = styled.div`
   margin: auto;
   height: ${({ single }) => (single ? 'auto' : '36rem')};
   border-radius: 0.2rem;
@@ -25,7 +25,7 @@ const StyledPhotoContent = styled.div`
   }
 
   .img {
-    grid-row: ${({ single }) => (single ? 1 : 1 / 4)};
+    grid-row: ${({ single }) => (single ? 1 : '1 / 4')};
     border-radius: ${({ single }) => (single ? '0.4rem' : 'none')};
     overflow: ${({ single }) => (single ? 'hidden' : 'initial')};
   }
@@ -87,4 +87,4 @@ const StyledPhotoContent = styled.div`
   }
 `;
 
-export default StyledPhotoContent;
+export default PhotoContent;

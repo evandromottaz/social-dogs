@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledImage = styled.div`
+const Image = styled.div`
   display: grid;
 
   .img {
@@ -30,4 +30,4 @@ const StyledImage = styled.div`
   }
 `;
 
-export default StyledImage;
+export default Image;
