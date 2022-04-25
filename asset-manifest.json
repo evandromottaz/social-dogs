@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/social-dogs-origamid/static/js/main.aca6f1ca.chunk.js",
-    "main.js.map": "/social-dogs-origamid/static/js/main.aca6f1ca.chunk.js.map",
+    "main.js": "/social-dogs-origamid/static/js/main.aa773ab8.chunk.js",
+    "main.js.map": "/social-dogs-origamid/static/js/main.aa773ab8.chunk.js.map",
     "runtime-main.js": "/social-dogs-origamid/static/js/runtime-main.fe646d02.js",
     "runtime-main.js.map": "/social-dogs-origamid/static/js/runtime-main.fe646d02.js.map",
     "static/js/2.40d3422e.chunk.js": "/social-dogs-origamid/static/js/2.40d3422e.chunk.js",
@@ -22,6 +22,6 @@
   "entrypoints": [
     "static/js/runtime-main.fe646d02.js",
     "static/js/3.7c1c8111.chunk.js",
-    "static/js/main.aca6f1ca.chunk.js"
+    "static/js/main.aa773ab8.chunk.js"
   ]
 }
