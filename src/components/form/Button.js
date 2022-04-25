@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Styles from '../styles/Button.styled';
 const Button = ({ children, ...props }) => {
   return (
-    <button type="submit" {...props}>
+    <Styles type="submit" {...props}>
       {children}
-    </button>
+    </Styles>
   );
 };
 
